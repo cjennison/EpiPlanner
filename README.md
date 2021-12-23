@@ -7,8 +7,13 @@ This plugin is under development.
 
 ### Roadmap
 #### Openers
+Display Opener chains up to any number of predefined actions. Opener actions disappear when used.
 #### Burst Phases
+Burst phases initiated on actions with tied burst initiations. Display burst chains.
+#### Customization
+Allow custom phases to be developed and selected for a given fight/instance.
 #### All Phases
+Full 'Hekili' style plugin.
 
 ### References
 DalamudPluginProjectTemplate: https://github.com/karashiiro/DalamudPluginProjectTemplate  
