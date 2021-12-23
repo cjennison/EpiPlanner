@@ -105,6 +105,33 @@ No, not in my opinion. The information this tool provides is information a playe
 This plugin would not press any keys for the user and in fact, the output of the plugin is subjective providing an suggestion - not the correct answer.
 Encounter Mechanics may alter the true rotation one may need to implement. This plugin serves as a good starting point, but mastery of a role exceeds the scope of this plugin.
 
+### Simulation Strings
+While currently each class would need to be engineered, it is not out of the realm of possibility to utilize a Simulation string similar to that of SimulationCraft used in World of Warcraft.
+Such a string would come later in development. For now due to the nature of the oGCD and GCD system, the class engineering will need to be handled manually.
+
+Theoretical example:
+```
+phase filler
+p barrel stabilizer if heat <= 50
+p reassemble 1 > chainsaw 0
+p reassemble 1 > air anchor 0
+p reassemble 1 > drill 0
+p chainsaw 0 
+p air anchor 0
+p drill 0
+p gauss round 1
+p ricochet 1
+....
+p overdrive --> phase overdrive
+
+phase overdrive
+p heat shot 0
+p gauss round 1
+p ricochet 1
+c overheated end --> phase filler
+
+```
+
 ___
 Inspiration is taken from World of Warcraft's Hekili addon.  
 https://www.curseforge.com/wow/addons/hekili   
