@@ -66,23 +66,31 @@ Phase: Filler
 
     Use Barrel Stabilizer on CD if heat would not exceed 100%
 
-MCHEngine returns ActionPlan:
+MCHEngine returns ActionPlan mchActionPlan:
 [
-  { name: "Barrel Stabilizer", type: 1 },
-  { name: "Chainsaw", type: 0 },
-  { name: "Gauss Round", type: 1 },
-  { name: "Ricochet", type: 1 },
-  { name: "Reassmble", type: 1 },
-  { name: "Air Anchor", type: 0 },
-  { name: "Gauss Round", type: 1 },
-  { name: "Ricochet", type: 1 },
-  { name: "Drill", type: 0 },
-  { name: "Gauss Round", type: 1 },
-  { name: "Ricochet", type: 1 },
-  { name: "Heated Split Shot", type: 0 },
-  { name: "Heated Slug Shot", type: 0 },
-  { name: "Heated Clean Shot", type: 0 },
+  Action{ name: "Barrel Stabilizer", type: 1 },
+  Action{ name: "Chainsaw", type: 0 },
+  Action{ name: "Gauss Round", type: 1 },
+  Action{ name: "Ricochet", type: 1 },
+  Action{ name: "Reassmble", type: 1 },
+  Action{ name: "Air Anchor", type: 0 },
+  Action{ name: "Gauss Round", type: 1 },
+  Action{ name: "Ricochet", type: 1 },
+  Action{ name: "Drill", type: 0 },
+  Action{ name: "Gauss Round", type: 1 },
+  Action{ name: "Ricochet", type: 1 },
+  Action{ name: "Heated Split Shot", type: 0 },
+  Action{ name: "Heated Slug Shot", type: 0 },
+  Action{ name: "Heated Clean Shot", type: 0 },
 ]
+
+displayEngine.render(mchActionPlan)
+
+
+Machinist uses Barrel Stabilizer
+Listener catches the event and stores it in the game state
+MCHEngine reads the state and sees Barrel Stabilizer used and re-computes state - removing the Barrel Stabilizer.
+
 ```
 
 A resulting UI representation may look like:   
