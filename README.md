@@ -11,7 +11,7 @@ This plugin is under development.
 #### All Phases
 
 ### References
-DalamudPluginProjectTemplate: https://github.com/karashiiro/DalamudPluginProjectTemplate
+DalamudPluginProjectTemplate: https://github.com/karashiiro/DalamudPluginProjectTemplate  
 SamplePlugin: https://github.com/goatcorp/SamplePlugin
 
 
