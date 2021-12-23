@@ -2,10 +2,17 @@
 Rotation planner using available logging information to help assist in the
 performance of DPS classes in FFXIV.
 
-
 ## WIP
+This plugin is under development.
 
+### Roadmap
+#### Openers
+#### Burst Phases
+#### All Phases
 
+### References
+DalamudPluginProjectTemplate: https://github.com/karashiiro/DalamudPluginProjectTemplate
+SamplePlugin: https://github.com/goatcorp/SamplePlugin
 
 
 ### Whitepage
