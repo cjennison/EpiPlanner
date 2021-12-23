@@ -12,8 +12,8 @@ performance of DPS classes in FFXIV.
 
 EpiPlan is a rotation helper that generalizing FFXIV DPS rotation into:
 - Phases: Parts of a rotation with differing priorities. 
-- Priorities
-- Chains
+- Priorities: Tiered list of abilities that take precedence over others, separated by GCD and oGCDs.
+- Chains: Abilities with dependencies.
 
 Each job implements its own set of these controls.
 At a basic version, EpiPlan can detect what phase a player enters into and offers guidance on the next set of
@@ -46,6 +46,56 @@ The *Orchestrator* connects all of the above.
 
 ![diagram](https://i.imgur.com/DODxE0e.png)
 
+An example of this would be as follows:   
+`
+Machinist starts combat
+JobRunner initiates MCHEngine and sends the GameState
+Phase: Filler
+  Priorities:
+    0. Barrel Stabilizer
+    1. Reassmble
+    2. Chainsaw
+    3. Air Anchor
+    4. Drill
+    5. Ricochet
+    6. Gauss Round
+    7. Heated Split Shot > Heated Slug Shot > Heated Clean Shot
+
+    Chainsaw, Drill, Air Anchor delayed if Reassmble CD < 5 seconds.
+    Weave Reassmeble in oGCD
+
+    Use Barrel Stabilizer on CD if heat would not exceed 100%
+
+MCHEngine returns ActionPlan:
+[
+  { name: "Barrel Stabilizer", type: 1 },
+  { name: "Chainsaw", type: 0 },
+  { name: "Gauss Round", type: 1 },
+  { name: "Ricochet", type: 1 },
+  { name: "Reassmble", type: 1 },
+  { name: "Air Anchor", type: 0 },
+  { name: "Gauss Round", type: 1 },
+  { name: "Ricochet", type: 1 },
+  { name: "Drill", type: 0 },
+  { name: "Gauss Round", type: 1 },
+  { name: "Ricochet", type: 1 },
+  { name: "Heated Split Shot", type: 0 },
+  { name: "Heated Slug Shot", type: 0 },
+  { name: "Heated Clean Shot", type: 0 },
+]
+`
+
+A resulting UI representation may look like:   
+![Example](https://i.imgur.com/jkO892r.png)
+
+### How would Openers be handled
+Openers would be considered a phase. The job engine would know to return the Opener phase almost as a constant
+and not as something requiring any degree of intelligence.
+
+### Is this against ToS?
+No, not in my opinion. The information this tool provides is information a player would have anyways, but displayed in a digestable form.
+This plugin would not press any keys for the user and in fact, the output of the plugin is subjective providing an suggestion - not the correct answer.
+Encounter Mechanics may alter the true rotation one may need to implement. This plugin serves as a good starting point, but mastery of a role exceeds the scope of this plugin.
 
 ___
 Inspiration is taken from World of Warcraft's Hekili addon.  
