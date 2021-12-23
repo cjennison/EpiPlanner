@@ -47,7 +47,7 @@ The *Orchestrator* connects all of the above.
 ![diagram](https://i.imgur.com/DODxE0e.png)
 
 An example of this would be as follows:   
-`
+```
 Machinist starts combat
 JobRunner initiates MCHEngine and sends the GameState
 Phase: Filler
@@ -83,7 +83,7 @@ MCHEngine returns ActionPlan:
   { name: "Heated Slug Shot", type: 0 },
   { name: "Heated Clean Shot", type: 0 },
 ]
-`
+```
 
 A resulting UI representation may look like:   
 ![Example](https://i.imgur.com/jkO892r.png)
