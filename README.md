@@ -15,8 +15,6 @@ EpiPlan is a rotation helper that generalizing FFXIV DPS rotation into:
 - Priorities
 - Chains
 
-Inspiration is taken from World of Warcraft's Hekili addon.
-
 Each job implements its own set of these controls.
 At a basic version, EpiPlan can detect what phase a player enters into and offers guidance on the next set of
 button presses to execute.
@@ -47,3 +45,9 @@ The *DisplayEngine* consumes an ActionPlan and displays it on the UI.
 The *Orchestrator* connects all of the above.
 
 ![diagram](https://i.imgur.com/DODxE0e.png)
+
+
+___
+Inspiration is taken from World of Warcraft's Hekili addon.
+![hekili](http://i.imgur.com/90h4L8s.png)
+___
