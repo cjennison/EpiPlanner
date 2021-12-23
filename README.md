@@ -49,5 +49,6 @@ The *Orchestrator* connects all of the above.
 
 ___
 Inspiration is taken from World of Warcraft's Hekili addon.  
+https://www.curseforge.com/wow/addons/hekili   
 ![hekili](http://i.imgur.com/90h4L8s.png)
 ___
