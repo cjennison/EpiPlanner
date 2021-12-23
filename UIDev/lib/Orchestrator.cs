@@ -28,8 +28,9 @@ namespace UIDev.lib
     public void run()
     {
       Trace.WriteLine("Orchestrator run()");
-
-      this.displayEngine.draw();
+      Trace.WriteLine("Job: MCH");
+      List<Action> plan = this.jobRunner.getPlan(Jobs.MCH);
+      this.displayEngine.draw(plan);
     }
   }
 }

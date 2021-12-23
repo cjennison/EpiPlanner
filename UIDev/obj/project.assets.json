@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chris\\source\\repos\\EpiPlan\\UIDev\\UIDev.csproj",
+      "projectUniqueName": "C:\\Users\\Chris\\source\\repos\\EpiPlanner\\UIDev\\UIDev.csproj",
       "projectName": "UIDev",
-      "projectPath": "C:\\Users\\Chris\\source\\repos\\EpiPlan\\UIDev\\UIDev.csproj",
+      "projectPath": "C:\\Users\\Chris\\source\\repos\\EpiPlanner\\UIDev\\UIDev.csproj",
       "packagesPath": "C:\\Users\\Chris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chris\\source\\repos\\EpiPlan\\UIDev\\obj\\",
+      "outputPath": "C:\\Users\\Chris\\source\\repos\\EpiPlanner\\UIDev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Chris\\AppData\\Roaming\\NuGet\\NuGet.Config",

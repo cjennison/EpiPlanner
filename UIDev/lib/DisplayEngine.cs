@@ -11,9 +11,14 @@ namespace UIDev.lib
 {
   internal class DisplayEngine
   {
-    public void draw()
+    public void draw(List<Action> plan)
     {
       ImGui.Text("Hello World!");
+
+      foreach (Action action in plan)
+      {
+        ImGui.Text(action.ActionName);
+      }
     }
   }
 }
