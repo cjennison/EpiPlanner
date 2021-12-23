@@ -1,0 +1,13 @@
+{
+  "Author": "Epi Penguin",
+  "Name": "EpiPlan",
+  "Punchline": "Rotation helper.",
+  "Description": "Rotation helper for maximizing DPS while focusing on mechanics. Use /epiplan for settings.",
+  "InternalName": "epiPlan",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "sample",
+    "plugin",
+    "goats"
+  ]
+}
