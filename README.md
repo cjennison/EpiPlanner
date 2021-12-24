@@ -144,6 +144,16 @@ c overheated end --> phase filler
 
 ```
 
+
+### Tracking Actions
+Utilize the https://goatcorp.github.io/Dalamud/api/Dalamud.Game.ClientState.Objects.Types.BattleChara.html
+To track the current spell/ability/weaponskill being cast and using additional information such as 
+total cast time, and current cast time. This helps in tracking the last ability used.
+
+Additional Resources:
+https://goatcorp.github.io/Dalamud/api/FFXIVClientStructs.FFXIV.Client.Game.ActionManager.html
+https://goatcorp.github.io/Dalamud/api/FFXIVClientStructs.FFXIV.Client.Game.Character.BattleChara.CastInfo.html
+
 ___
 Inspiration is taken from World of Warcraft's Hekili addon.  
 https://www.curseforge.com/wow/addons/hekili   

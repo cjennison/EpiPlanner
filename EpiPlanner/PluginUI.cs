@@ -1,5 +1,7 @@
 ﻿using ImGuiNET;
 using Dalamud.Logging;
+using Dalamud.Game.ClientState.Objects.SubKinds;
+using Dalamud.Game.ClientState;
 using System;
 using System.Numerics;
 
@@ -10,6 +12,7 @@ namespace EpiPlan
   class PluginUI : IDisposable
   {
     private Configuration configuration;
+    private ClientState ClientState;
 
     private ImGuiScene.TextureWrap goatImage;
 
@@ -29,10 +32,11 @@ namespace EpiPlan
     }
 
     // passing in the image here just for simplicity
-    public PluginUI(Configuration configuration, ImGuiScene.TextureWrap goatImage)
+    public PluginUI(Configuration configuration, ImGuiScene.TextureWrap goatImage, ClientState clientState)
     {
       this.configuration = configuration;
       this.goatImage = goatImage;
+      this.ClientState = clientState;
     }
 
     public void Dispose()
@@ -68,6 +72,10 @@ namespace EpiPlan
       {
         ImGui.Text($"Epi Plan is {(this.configuration.EnablePlanner ? "Enabled" : "Disabled")}");
 
+        var actionId   = this.ClientState.LocalPlayer.CastActionId;
+        var actionType = this.ClientState.LocalPlayer.CastActionType;
+        var playerName = this.ClientState.LocalPlayer.Name;
+
         if (ImGui.Button("Settings"))
         {
           SettingsVisible = true;
@@ -75,10 +83,7 @@ namespace EpiPlan
 
         ImGui.Spacing();
 
-        ImGui.Text("Have a goat:");
-        ImGui.Indent(55);
-        ImGui.Image(this.goatImage.ImGuiHandle, new Vector2(this.goatImage.Width, this.goatImage.Height));
-        ImGui.Unindent(55);
+        ImGui.Text($"{actionId} {actionType} {playerName}");
       }
       ImGui.End();
     }
